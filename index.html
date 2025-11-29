@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlett 廖琳煜 - 个人网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-gray-1: #f5f5f7;
+            --apple-gray-2: #d2d2d7;
+            --apple-gray-3: #86868b;
+            --apple-gray-4: #424245;
+            --apple-gray-5: #1d1d1f;
+            --apple-blue: #0071e3;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: var(--apple-gray-5);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+        }
+        
+        .apple-gradient-text {
+            background: linear-gradient(135deg, #1d1d1f 0%, #424245 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .apple-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        }
+        
+        .apple-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .small-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <nav class="apple-nav fixed top-0 left-0 right-0 z-50 border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-semibold text-gray-900">Scarlett</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#basic" class="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-300">基础信息</a>
+                    <a href="#positioning" class="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-300">自我定位</a>
+                    <a href="#achievements" class="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-300">个人成就</a>
+                    <a href="#goals" class="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-300">当前目标</a>
+                    <a href="#value" class="text-gray-600 hover:text-gray-900 font-medium transition-colors duration-300">我的价值</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <div class="fade-in">
+                    <h1 class="apple-gradient-text text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Scarlett
+                        <br>
+                        <span class="text-3xl lg:text-4xl font-normal text-gray-700">廖琳煜</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        终身学习者 · 迭代优化者 · 内容输出者
+                    </p>
+                    <div class="flex flex-wrap gap-3 justify-center mb-8">
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">金牛座</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">19岁</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">INTJ</span>
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">微信: Ghh820313</span>
+                    </div>
+                    <div class="flex space-x-4 justify-center">
+                        <a href="#achievements" class="px-6 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+                            查看成就
+                        </a>
+                        <a href="#goals" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-300">
+                            了解目标
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 基础信息部分 -->
+    <section id="basic" class="section-padding px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4 fade-in">基础信息</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">了解我的基本背景与个性特征</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-blue-100 to-blue-200">
+                            <span class="text-3xl">♉</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">星座</h3>
+                        <p class="text-gray-600">金牛座</p>
+                        <p class="text-sm text-gray-500 mt-2">踏实稳健，持之以恒</p>
+                    </div>
+                </div>
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-green-100 to-green-200">
+                            <span class="text-3xl">🎂</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">年龄</h3>
+                        <p class="text-gray-600">19岁</p>
+                        <p class="text-sm text-gray-500 mt-2">青春正好，未来可期</p>
+                    </div>
+                </div>
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-purple-100 to-purple-200">
+                            <span class="text-3xl">🧠</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">MBTI</h3>
+                        <p class="text-gray-600">INTJ</p>
+                        <p class="text-sm text-gray-500 mt-2">战略家型人格，理性思考者</p>
+                    </div>
+                </div>
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-yellow-100 to-yellow-200">
+                            <span class="text-3xl">💬</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">微信</h3>
+                        <p class="text-gray-600">Ghh820313</p>
+                        <p class="text-sm text-gray-500 mt-2">欢迎交流，共同成长</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自我定位部分 -->
+    <section id="positioning" class="section-padding px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4 fade-in">自我定位</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">明确个人发展方向与核心特质</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                            <span class="text-3xl">📚</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">终身学习者</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            持续学习新知识，不断扩展认知边界，保持对新事物的好奇心和探索精神，将学习视为一种生活方式。
+                        </p>
+                    </div>
+                </div>
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-green-500 to-green-600 text-white">
+                            <span class="text-3xl">🔄</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">迭代优化者</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            擅长复盘思考，及时进行优化调整，总结出一套行之有效的复盘方法论，持续改进个人系统和工作流程。
+                        </p>
+                    </div>
+                </div>
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+                            <span class="text-3xl">💡</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">内容输出者</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            在朋友圈分享思考、经历与成果，通过内容输出建立个人影响力，对商业世界充满好奇与探索。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人成就部分 -->
+    <section id="achievements" class="section-padding px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4 fade-in">个人成就</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">过往经历中的亮点与突破</p>
+            
+            <div class="space-y-8">
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                            <div class="icon-container bg-gradient-to-br from-yellow-100 to-yellow-200">
+                                <span class="text-4xl">📈</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">学业突破</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                复读一年增分80+，语文达到125分，通过系统方法和坚持突破自我极限。
+                            </p>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium text-gray-700">成就达成</span>
+                                <span class="ml-2 text-sm text-gray-500">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                            <div class="icon-container bg-gradient-to-br from-blue-100 to-blue-200">
+                                <span class="text-4xl">🎤</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">表达系统</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                经历两次播音艺考，打磨了属于自己的一套语言表达系统，能够清晰、有条理地传达思想。
+                            </p>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium text-gray-700">成就达成</span>
+                                <span class="ml-2 text-sm text-gray-500">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                            <div class="icon-container bg-gradient-to-br from-green-100 to-green-200">
+                                <span class="text-4xl">💪</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">健康管理</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                艺考期间从120斤成功减至95斤，并优化了一套完整的减肥系统，通过目标导向的行动力实现转变。
+                            </p>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium text-gray-700">成就达成</span>
+                                <span class="ml-2 text-sm text-gray-500">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 当前目标部分 -->
+    <section id="goals" class="section-padding px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4 fade-in">当前目标</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">正在追求的个人成长与发展方向</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="small-icon bg-gradient-to-br from-blue-100 to-blue-200 mr-4">
+                            <span class="text-xl">📖</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">每周阅读</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">实现每周至少一本书的内化输出，建立系统化的知识管理体系。</p>
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700">目标状态</span>
+                        <span class="ml-2 text-sm text-gray-500">进行中</span>
+                    </div>
+                </div>
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="small-icon bg-gradient-to-br from-purple-100 to-purple-200 mr-4">
+                            <span class="text-xl">🌟</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">个人IP</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">搭建个人IP，通过内容输出建立个人品牌影响力。</p>
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700">目标状态</span>
+                        <span class="ml-2 text-sm text-gray-500">进行中</span>
+                    </div>
+                </div>
+                <div class="apple-card p-6 hover-lift fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="small-icon bg-gradient-to-br from-pink-100 to-pink-200 mr-4">
+                            <span class="text-xl">💪</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">身材管理</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">严格管理自己的身材与形象，保持最佳状态。</p>
+                    <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-700">目标状态</span>
+                        <span class="ml-2 text-sm text-gray-500">进行中</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的价值部分 -->
+    <section id="value" class="section-padding px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4 fade-in">我的价值</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto fade-in">能够提供的独特价值与贡献</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
+                            <span class="text-3xl">💭</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">认知提升</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            在认知提升上的心得感悟，通过持续学习和反思，建立更有效的思维模式，实现个人认知边界的不断拓展。
+                        </p>
+                    </div>
+                </div>
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-teal-500 to-teal-600 text-white">
+                            <span class="text-3xl">📚</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">学习方法</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            高效学习方法论的总结，建立个人学习系统，提高学习效率，实现知识的内化与应用，形成独特的学习体系。
+                        </p>
+                    </div>
+                </div>
+                <div class="apple-card p-8 hover-lift fade-in">
+                    <div class="text-center">
+                        <div class="icon-container bg-gradient-to-br from-amber-500 to-amber-600 text-white">
+                            <span class="text-3xl">🔄</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">复盘系统</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            个人复盘的方法和框架，建立持续改进的个人成长系统，实现迭代式进步，形成独特的自我优化方法论。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 px-6 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-2">Scarlett 廖琳煜</h3>
+                <p class="text-gray-400">终身学习者 · 迭代优化者 · 内容输出者</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#basic" class="text-gray-400 hover:text-white transition-colors duration-300">基础信息</a>
+                <a href="#positioning" class="text-gray-400 hover:text-white transition-colors duration-300">自我定位</a>
+                <a href="#achievements" class="text-gray-400 hover:text-white transition-colors duration-300">个人成就</a>
+                <a href="#goals" class="text-gray-400 hover:text-white transition-colors duration-300">当前目标</a>
+                <a href="#value" class="text-gray-400 hover:text-white transition-colors duration-300">我的价值</a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                <p>微信: Ghh820313 | 邮箱: 3064240575@qq.com</p>
+                <p class="mt-2">© 2024 Scarlett 廖琳煜. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                fadeInObserver.observe(element);
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-white/95', 'shadow-sm');
+                } else {
+                    nav.classList.remove('bg-white/95', 'shadow-sm');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
